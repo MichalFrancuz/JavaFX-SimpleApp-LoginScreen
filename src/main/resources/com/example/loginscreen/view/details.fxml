@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1976d2;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginscreen.controller.DetailsController">
+   <children>
+      <Label fx:id="detailsWelcomeLabel" alignment="CENTER" layoutX="344.0" layoutY="14.0" prefHeight="20.0" prefWidth="176.0" text="Welcome">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="23.0" layoutY="54.0" prefHeight="170.0" prefWidth="555.0" style="-fx-background-color: #fff;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="127.0" fitWidth="197.0" layoutX="-21.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+               <image>
+                  <Image url="@assets/IMG_1141.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="detailsName" layoutX="163.0" layoutY="32.0" prefHeight="17.0" prefWidth="349.0" text="Name:" />
+            <Label fx:id="detailsAge" layoutX="163.0" layoutY="68.0" prefHeight="17.0" prefWidth="153.0" text="Age:" />
+            <Label fx:id="detailsProfession" layoutX="163.0" layoutY="106.0" prefHeight="17.0" prefWidth="349.0" text="Profession" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="180.0" layoutY="239.0" prefHeight="147.0" prefWidth="398.0" style="-fx-background-color: #fff;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label alignment="CENTER" layoutX="54.0" layoutY="14.0" prefHeight="17.0" prefWidth="256.0" text="How to find me?" textFill="#6f6e6e">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="66.0" layoutY="57.0" text="https://github.com/michal9696" textFill="#001eff" />
+            <Label layoutX="66.0" layoutY="90.0" text="francuz.michal@icloud.com" textFill="#001eff" />
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="29.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/icons8-github-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="29.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/icons8-man-with-mail-50.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
