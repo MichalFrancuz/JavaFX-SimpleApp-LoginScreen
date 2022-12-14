@@ -3,13 +3,18 @@ package com.example.loginscreen.controller;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import com.jfoenix.controls.JFXButton;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -31,18 +36,42 @@ public class LoginController {
 
     @FXML
     void initialize() {
-        assert loginButton != null : "fx:id=\"loginButton\" was not injected: check your FXML file 'login.fxml'.";
-        assert loginPassword != null : "fx:id=\"loginPassword\" was not injected: check your FXML file 'login.fxml'.";
-        assert loginUsername != null : "fx:id=\"loginUsername\" was not injected: check your FXML file 'login.fxml'.";
 
         loginUsername.setStyle("-fx-text-inner-color: #050404");
         loginPassword.setStyle("-fx-text-inner-color: #050404");
+
+
         loginButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                System.out.println("Login was clicked");
+                loginUser();
             }
         });
 
+    }
+
+    private void loginUser() {
+
+        //Get the main window
+        loginButton.getScene().getWindow().hide();
+
+        if (!loginUsername.getText().toString().trim().equals("")
+                 && !loginPassword.getText().toString().trim().equals("")) {
+            //ready to open next layout (page)
+            Stage detailsStage = new Stage();
+            try {
+                Parent root = FXMLLoader.load(getClass().getResource("/com/example/loginscreen/view/details.fxml"));
+
+                Scene scene = new Scene(root);
+                detailsStage.setScene(scene);
+                detailsStage.show();
+                detailsStage.setResizable(false);
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+        }
     }
 }
