@@ -58,19 +58,24 @@ public class LoginController {
         if (!loginUsername.getText().toString().trim().equals("")
                  && !loginPassword.getText().toString().trim().equals("")) {
             //ready to open next layout (page)
-            Stage detailsStage = new Stage();
-            try {
-                Parent root = FXMLLoader.load(getClass().getResource("/com/example/loginscreen/view/details.fxml"));
 
-                Scene scene = new Scene(root);
-                detailsStage.setScene(scene);
-                detailsStage.show();
-                detailsStage.setResizable(false);
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/com/example/loginscreen/view/details.fxml"));
+            try {
+                loader.load();
 
             } catch (IOException e) {
-                e.printStackTrace();
+                throw new RuntimeException(e);
             }
 
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+
+            DetailsController detailsController = loader.getController();
+            detailsController.setName(loginUsername.getText());
+
+            stage.show();
 
         }
     }

@@ -36,4 +36,11 @@ public class DetailsController {
     void initialize() {
 
     }
+
+    void setName(String name) {
+        detailsWelcomeLabel.setText("Welcome " + name);
+        detailsName.setText("Name: " + name);
+
+    }
+
 }
