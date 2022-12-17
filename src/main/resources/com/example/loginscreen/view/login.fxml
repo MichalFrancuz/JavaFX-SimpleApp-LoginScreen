@@ -11,7 +11,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #1976d2;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginscreen.controller.LoginController">
    <children>
-      <Label alignment="CENTER" layoutX="260.0" layoutY="118.0" prefHeight="40.0" prefWidth="182.0" text="Login" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="165.0" layoutY="116.0" prefHeight="53.0" prefWidth="371.0" text="Login to Contact Page" textFill="WHITE">
          <font>
             <Font size="36.0" />
          </font>

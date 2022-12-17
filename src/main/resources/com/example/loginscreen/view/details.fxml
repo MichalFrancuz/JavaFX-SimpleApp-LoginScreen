@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.effect.DropShadow?>
@@ -20,14 +21,14 @@
             <DropShadow />
          </effect>
          <children>
-            <ImageView fitHeight="127.0" fitWidth="197.0" layoutX="-21.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+            <ImageView fitHeight="117.0" fitWidth="188.0" layoutX="-5.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
                <image>
                   <Image url="@assets/IMG_1141.jpg" />
                </image>
             </ImageView>
-            <Label fx:id="detailsName" layoutX="163.0" layoutY="32.0" prefHeight="17.0" prefWidth="349.0" text="Name:" />
-            <Label fx:id="detailsAge" layoutX="163.0" layoutY="68.0" prefHeight="17.0" prefWidth="153.0" text="Age:" />
-            <Label fx:id="detailsProfession" layoutX="163.0" layoutY="106.0" prefHeight="17.0" prefWidth="349.0" text="Profession" />
+            <Label fx:id="detailsName" layoutX="145.0" layoutY="31.0" prefHeight="17.0" prefWidth="393.0" text="Name:" />
+            <Label fx:id="detailsAge" layoutX="145.0" layoutY="68.0" prefHeight="17.0" prefWidth="153.0" text="Age:" />
+            <Label fx:id="detailsProfession" layoutX="145.0" layoutY="106.0" prefHeight="17.0" prefWidth="393.0" text="Profession" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="180.0" layoutY="239.0" prefHeight="147.0" prefWidth="398.0" style="-fx-background-color: #fff;">
@@ -47,8 +48,6 @@
                   </Label>
                </children>
             </AnchorPane>
-            <Label fx:id="detailsGitHub" layoutX="66.0" layoutY="57.0" text="https://github.com/MichalFrancuz" textFill="#001eff" />
-            <Label fx:id="detailsMail" layoutX="66.0" layoutY="90.0" text="francuz.michal@icloud.com" textFill="#001eff" />
             <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="29.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@assets/icons8-github-64.png" />
@@ -56,9 +55,11 @@
             </ImageView>
             <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="29.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@assets/icons8-man-with-mail-50.png" />
+                  <Image url="@assets/icons8-linkedin-circled-48.png" />
                </image>
             </ImageView>
+            <Hyperlink fx:id="detailsGitHub" layoutX="66.0" layoutY="54.0" text="https://github.com/MichalFrancuz" />
+            <Hyperlink fx:id="detailsLinkedIn" layoutX="66.0" layoutY="87.0" prefWidth="323.0" text="https://www.linkedin.com/in/micha%C5%82-francuz-45499a110/" />
          </children>
       </AnchorPane>
    </children>

@@ -56,7 +56,7 @@ public class LoginController {
         loginButton.getScene().getWindow().hide();
 
         if (!loginUsername.getText().toString().trim().equals("")
-                 && !loginPassword.getText().toString().trim().equals("")) {
+                && !loginPassword.getText().toString().trim().equals("")) {
             //ready to open next layout (page)
 
             FXMLLoader loader = new FXMLLoader();
@@ -73,7 +73,7 @@ public class LoginController {
             stage.setScene(new Scene(root));
 
             DetailsController detailsController = loader.getController();
-            detailsController.setName(loginUsername.getText());
+            detailsController.setName(loginUsername.getText(), "Web and Mobile App Developer - Java, Swift, Kotlin, JavaScript", 1996);
 
             stage.show();
 
